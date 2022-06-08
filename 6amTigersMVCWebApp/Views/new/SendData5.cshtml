@@ -1,0 +1,22 @@
+﻿@model  List<_6amTigersMVCWebApp.Models.EmployeeModel>
+@{
+    ViewBag.Title = "SendData5";
+}
+
+<h2>SendData5</h2>
+
+<table class="table table-condensed table-bordered table-striped">
+    <tr>
+        <th>EmpId</th>
+        <th>EmpName</th>
+        <th>EmpSalary</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EmpId</td>
+            <td>@item.EmpName</td>
+            <td>@item.EmpSalary</td>
+        </tr>
+    }
+</table>

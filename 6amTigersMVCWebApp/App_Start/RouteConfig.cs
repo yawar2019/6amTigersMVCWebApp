@@ -13,11 +13,27 @@ namespace _6amTigersMVCWebApp
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes(); 
+
+            routes.MapRoute(
+                name: "xyz",
+                url: "IPLWinner/Titan",
+                defaults: new { controller = "new", action = "SampleMethod2", eid = UrlParameter.Optional }
+            );
+
+
+            routes.MapRoute(
+               name: "pqr",
+               url: "IPLRunnerUp/Royals",
+               defaults: new { controller = "new", action = "SampleMethod2", eid = UrlParameter.Optional }
+           );
+
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                url: "{controller}/{action}/{eid}",
+                defaults: new { controller = "Home", action = "Index", eid = UrlParameter.Optional }
             );
+
         }
     }
 }

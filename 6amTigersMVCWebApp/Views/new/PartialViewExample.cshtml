@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "PartialViewExample";
+}
+
+<h2>PartialViewExample</h2>
+
+<ul>
+    <li>priyanka</li>
+    <li>Monty</li>
+    <li>Afzal</li>
+</ul>
+
+@{
+
+    var s= Html.Partial("_myPartialView");
+    int a = 11;
+    if (a > 10)
+    {
+        @s;
+    }
+
+    }
+@{Html.RenderPartial("_myPartialView");}
+
+
+@{
+    Html.RenderPartial("...mypartialview");
+}
+
+@*it  have return type as mvchtml string
+it return Htmlstring and also it render partial view
+you can store partial view and display basedon condition
+it do two job thats why it is slowfrom render partial method
+
+
+Renderpartial
+
+it have return type void
+it isjust display partial view
+it is more faster then partial view as it does only 1 job*@ 

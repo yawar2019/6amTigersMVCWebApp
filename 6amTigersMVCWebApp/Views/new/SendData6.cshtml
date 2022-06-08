@@ -1,0 +1,37 @@
+﻿@model _6amTigersMVCWebApp.Models.EmpDept
+@{
+    ViewBag.Title = "SendData6";
+}
+
+<h2>SendData6</h2>
+
+
+<table class="table table-condensed table-bordered table-striped">
+    <tr>
+        <th>EmpId</th>
+        <th>EmpName</th>
+        <th>EmpSalary</th>
+    </tr>
+    @foreach (var item in Model.emp)
+    {
+        <tr>
+            <td>@item.EmpId</td>
+            <td>@item.EmpName</td>
+            <td>@item.EmpSalary</td>
+        </tr>
+    }
+</table>
+
+<table class="table table-condensed table-bordered table-striped">
+    <tr>
+        <th>DepartmentId</th>
+        <th>DepartmentName</th>
+    </tr>
+    @foreach (var item in Model.dept)
+    {
+        <tr>
+            <td>@item.DeptId</td>
+            <td>@item.DeptName</td>
+        </tr>
+    }
+</table>

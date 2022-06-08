@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "DisplayEmployeeData";
+}
+
+<h2>DisplayEmployeeData</h2>
+
+<table id="table1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+</table>
+
+<script src="~/scripts/jquery-1.10.2.js"></script>
+
+<script>
+    $.ajax({
+
+        url: 'http://localhost:60414/new/getjsondata',
+        dataType: 'json',
+        type: 'GET',
+        success:function(result)
+        {
+            debugger;
+            var resp = result.emp;
+            $.each(resp, function (i, key) {
+
+                $('#table1 tr:last').after("<tr><td>" + key.EmpId + "</td><td>" + key.EmpName + "</td><td>" + key.EmpSalary + "</td></tr>")
+
+
+            })
+
+
+        }
+
+    })
+</script>
