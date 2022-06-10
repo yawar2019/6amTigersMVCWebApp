@@ -305,5 +305,48 @@ namespace _6amTigersMVCWebApp.Controllers
 
             return RedirectToAction("Index3", "Default", listEmp);
         }
+
+        public ContentResult GetContent(int id)
+        {
+            if (id == 1)
+            {
+                return Content("HelloWorld");
+            }
+            else if (id == 2)
+            {
+                return Content("<h1 style=color:red>Hello World</h1>");
+            }
+            else
+            {
+                return Content("<script>alert('welcome to World')</script>");
+            }
+        }
+
+        public ActionResult ViewbagAndViewDataExample()
+        {
+            // ViewData["student"] = "Sanjay";
+            ViewBag.student = "sandya";
+            //return RedirectToAction("ViewbagAndViewDataExample2");
+            return View();
+        }
+        public ActionResult ViewbagAndViewDataExample2()
+        {
+            //string value= ViewData["student"].ToString();
+            string value = ViewBag.student;
+            return Content(value);
+        }
+
+        public ActionResult TempdataExample()
+        {
+            TempData["Employee"] = "Sandya";
+            return RedirectToAction("TempdataExample2");
+        }
+
+        public ActionResult TempdataExample2()
+        {
+            string value = Convert.ToString(TempData["Employee"]);
+            TempData.Keep();
+            return Content(value);
+        }
     }
 }

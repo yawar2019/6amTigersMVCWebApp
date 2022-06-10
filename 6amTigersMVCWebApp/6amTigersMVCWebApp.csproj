@@ -170,6 +170,7 @@
     <Content Include="Views\new\PartialViewExample.cshtml" />
     <Content Include="Views\new\DisplayEmployeeData.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\new\ViewbagAndViewDataExample.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
