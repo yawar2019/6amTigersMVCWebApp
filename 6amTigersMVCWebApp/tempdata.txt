@@ -1,0 +1,47 @@
+ TempData is a dictionary object that is derived from TempDataDictionary class and stored in short lives session.
+
+public TempDataDictionary TempData { get; set; }
+TempData is a property of ControllerBase class.
+
+TempData is used to pass data from current request to subsequent request (means redirecting from one page to another).
+
+It’s life is very short and lies only till the target view is fully loaded.
+
+It’s required typecasting for getting data and check for null values to avoid error.
+
+It is used to store only one time messages like error messages, validation messages. To persist data with TempData refer this article: Persisting Data with TempData
+
+TempData:it is used to transfer the data from one  controller to another controller then you can use tempdata
+
+Tempdata is also Tempdictionary object
+
+Tempdata["key"]=value;
+
+Tempdata is used to retain the values by two ways
+1)keep method: it is used to retain the values which is present in tempdata
+               return type is void
+
+ Tempdata.keep();
+
+
+2)peek method:
+it is used for getting the object by using the key and will retain the values
+by not allowing the key to be deleted
+ Tempdata.peek("key");both accessing value and for retaing the value
+
+
+public ActionResult Index()
+        {
+            TempData["Student"] = "Pratiusha";
+            return RedirectToAction("About");
+        }
+        public ActionResult About()
+        {
+            var b = TempData.Peek("Student");
+            var c = TempData.Peek("Student");
+            ViewData["b"] = b;
+            ViewData["c"] = c;
+            
+
+            return View();
+        }

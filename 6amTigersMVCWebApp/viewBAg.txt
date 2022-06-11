@@ -1,0 +1,101 @@
+ViewData is a dictionary object that is derived from ViewDataDictionary class.
+
+public ViewDataDictionary ViewData { get; set; }
+
+ViewData is a property of Controller Base class.
+
+ViewData is used to pass data from controller to corresponding view.
+
+It’s life lies only during the current request.
+
+If redirection occurs then it’s value becomes null.
+
+It’s required typecasting for getting data and check for null values to avoid error.
+
+Viewdata is used for transfering the data from controller to view for a corresponded or single request
+
+ public ActionResult Index()
+        {
+            List<string> obj = new List<string>();
+            obj.Add("pratiusha");
+            obj.Add("deepti");
+            obj.Add("Nagini");
+            obj.Add("Anusha");
+            ViewData["Student"] = obj;
+            return View();
+        }
+
+<ul>
+    @foreach (string item in ViewData["Student"] as List<string>)
+    {
+
+        <li>@item</li>
+    }
+</ul> 
+
+
+
+2)ViewBag:
+ViewBag is a dynamic property that takes advantage of the Old dynamic features in C# 4.0.
+
+Basically it is a wrapper around the ViewData and also used to pass data from controller to corresponding view.
+
+public Object ViewBag { get;set; }
+ViewBag is a property of ControllerBase class.
+
+It’s life also lies only during the current request.
+
+If redirection occurs then it’s value becomes null.
+
+It doesn’t required typecasting for getting data.
+
+we are creating model in model folder
+
+
+  public class Employee
+    {
+        public int Empid { get; set; }
+        public string EmpName { get; set; }
+
+        public string Department { get; set; }
+    }
+
+
+
+--->
+creating Controller
+
+  public ActionResult Index()
+        {
+            Employee emp = new Employee();
+            emp.Empid = 1;
+            emp.EmpName = "prfatiusha";
+            emp.Department = "IT";
+
+            ViewBag.Details = emp;
+            return View();
+        }
+
+under view 
+ 
+<ul>
+   <li> @ViewBag.Details.Empid</li>
+    <li> @ViewBag.Details.EmpName</li>
+    <li> @ViewBag.Details.Department</li>
+</ul> 
+
+or
+
+
+@{
+    ViewBag.Title = "Index";
+    var myfellow = ViewBag.Details;
+}
+
+<h2>Index</h2>
+ 
+<ul>
+    <li> @myfellow.Empid</li>
+    <li> @myfellow.EmpName</li>
+    <li> @myfellow.Department</li>
+</ul> 

@@ -131,6 +131,8 @@
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="tempdata.txt" />
+    <Content Include="viewBAg.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

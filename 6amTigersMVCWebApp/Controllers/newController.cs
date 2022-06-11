@@ -344,8 +344,10 @@ namespace _6amTigersMVCWebApp.Controllers
 
         public ActionResult TempdataExample2()
         {
-            string value = Convert.ToString(TempData["Employee"]);
-            TempData.Keep();
+            //string value = Convert.ToString(TempData["Employee"]);
+            //  TempData.Keep();
+            //it will initialise value and it will retain key
+            string value = Convert.ToString(TempData.Peek("Employee"));
             return Content(value);
         }
     }
