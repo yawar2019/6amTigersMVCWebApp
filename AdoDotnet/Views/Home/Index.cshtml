@@ -1,0 +1,26 @@
+﻿@model List<AdoDotnet.Models.EmployeeModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.EmpId</td>
+    <td>@item.EmpName</td>
+    <td>@item.EmpSalary</td>
+    <td>
+        @Html.ActionLink("Edit","Edit",new {id=@item.EmpId})
+    </td>
+</tr>
+    }
+</table>
