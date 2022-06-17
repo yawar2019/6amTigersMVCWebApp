@@ -6,6 +6,7 @@
 <h2>Edit</h2>
 
 <form action="~/Home/Edit" method="post">
+    <input type="hidden" name="EmpId" value="@Model.EmpId" />
     <label>EmpName</label>
     <input type="text" name="EmpName" value="@Model.EmpName" /><br />
     <label>EmpSalary</label>

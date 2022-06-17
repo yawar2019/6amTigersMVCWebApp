@@ -37,5 +37,36 @@ namespace AdoDotnet.Controllers
             EmployeeModel emp = db.GetEmployeeById(id);
             return View(emp);
         }
+
+        [HttpPost]
+        public ActionResult Edit(EmployeeModel emp)
+        {
+            int result = db.UpdateEmployee(emp);
+            if (result > 0)
+            {
+
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
+        public ActionResult Delete(int? id)
+        {
+            EmployeeModel emp = db.GetEmployeeById(id);
+            return View(emp);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int? id)
+        {
+            int result = db.DeleteEmployee(id);
+            if (result > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
     }
 }
