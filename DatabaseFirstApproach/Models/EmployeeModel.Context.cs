@@ -13,10 +13,10 @@ namespace DatabaseFirstApproach.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EmployeeEntities1 : DbContext
+    public partial class EmployeeEntities2 : DbContext
     {
-        public EmployeeEntities1()
-            : base("name=EmployeeEntities1")
+        public EmployeeEntities2()
+            : base("name=EmployeeEntities2")
         {
         }
     

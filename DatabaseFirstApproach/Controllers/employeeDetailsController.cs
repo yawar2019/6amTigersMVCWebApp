@@ -12,7 +12,7 @@ namespace DatabaseFirstApproach.Controllers
 {
     public class employeeDetailsController : Controller
     {
-        private EmployeeEntities1 db = new EmployeeEntities1();
+        private EmployeeEntities2 db = new EmployeeEntities2();
 
         // GET: employeeDetails
         public ActionResult Index()

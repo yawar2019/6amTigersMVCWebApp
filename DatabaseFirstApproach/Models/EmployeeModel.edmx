@@ -51,7 +51,7 @@
           <Property Name="bonus" Type="Int32" />
           <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="EmployeeEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EmployeeEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="employeeDetails" EntityType="Self.employeeDetail" />
         </EntityContainer>
       </Schema>
@@ -59,7 +59,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EmployeeModelStoreContainer" CdmEntityContainer="EmployeeEntities1">
+        <EntityContainerMapping StorageEntityContainer="EmployeeModelStoreContainer" CdmEntityContainer="EmployeeEntities2">
           <EntitySetMapping Name="employeeDetails">
             <EntityTypeMapping TypeName="EmployeeModel.employeeDetail">
               <MappingFragment StoreEntitySet="employeeDetails">
