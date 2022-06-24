@@ -26,5 +26,6 @@ namespace DatabaseFirstApproach.Models
         }
     
         public virtual DbSet<employeeDetail> employeeDetails { get; set; }
+        public virtual DbSet<Department> Departments { get; set; }
     }
 }

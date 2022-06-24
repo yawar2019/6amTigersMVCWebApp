@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DatabaseFirstApproach.Models.employeeDetail>
+﻿@model IEnumerable<DatabaseFirstApproach.Models.EmpDept>
 
 @{
     ViewBag.Title = "Index";
@@ -17,38 +17,9 @@
         <th>
             @Html.DisplayNameFor(model => model.EmpSalary)
         </th>
+         
         <th>
-            @Html.DisplayNameFor(model => model.DeptId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.dob)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Mobiles)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Status)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MobileNo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Available)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedOn)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.bonus)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EmailId)
+            @Html.DisplayNameFor(model => model.DeptName)
         </th>
         <th></th>
     </tr>
@@ -61,38 +32,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.EmpSalary)
         </td>
+        
         <td>
-            @Html.DisplayFor(modelItem => item.DeptId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.dob)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Mobiles)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Status)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedBy)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MobileNo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Available)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedOn)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.bonus)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EmailId)
+            @Html.DisplayFor(modelItem => item.DeptName)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.EmpId }) |

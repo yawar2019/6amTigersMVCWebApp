@@ -26,7 +26,6 @@ namespace DatabaseFirstApproach.Models
         public string MobileNo { get; set; }
         public Nullable<bool> Available { get; set; }
         public Nullable<System.DateTime> CreatedOn { get; set; }
-        public Nullable<int> bonus { get; set; }
         public string EmailId { get; set; }
     }
 }
