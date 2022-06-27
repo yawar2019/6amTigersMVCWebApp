@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirstApproach", "Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFirstApproach\CodeFirstApproach.csproj", "{8488A4C4-9F7F-42C9-8F41-E5EBE5BE9615}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelBasedApproach", "ModelBasedApproach\ModelBasedApproach.csproj", "{929DF0B4-B0DE-4A1E-A145-4117F8819F9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperExample", "DapperExample\DapperExample.csproj", "{AE7B9EB5-F587-40CF-A890-ACDC6430C56D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{8488A4C4-9F7F-42C9-8F41-E5EBE5BE9615}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8488A4C4-9F7F-42C9-8F41-E5EBE5BE9615}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8488A4C4-9F7F-42C9-8F41-E5EBE5BE9615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{929DF0B4-B0DE-4A1E-A145-4117F8819F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{929DF0B4-B0DE-4A1E-A145-4117F8819F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{929DF0B4-B0DE-4A1E-A145-4117F8819F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{929DF0B4-B0DE-4A1E-A145-4117F8819F9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE7B9EB5-F587-40CF-A890-ACDC6430C56D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE7B9EB5-F587-40CF-A890-ACDC6430C56D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE7B9EB5-F587-40CF-A890-ACDC6430C56D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE7B9EB5-F587-40CF-A890-ACDC6430C56D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

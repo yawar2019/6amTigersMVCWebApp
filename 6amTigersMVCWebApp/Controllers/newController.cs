@@ -21,6 +21,13 @@ namespace _6amTigersMVCWebApp.Controllers
             string wish = SampleMethod();
             return wish;
         }
+
+        public ViewResult LayoutExample()
+        {
+            
+            return View();
+        }
+
         [NonAction]
         public string SampleMethod()
         {
