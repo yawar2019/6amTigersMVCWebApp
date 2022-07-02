@@ -1,0 +1,32 @@
+﻿@model _6amTigersMVCWebApp.Models.EmployeeModel
+@{
+    ViewBag.Title = "HtmlHelperExample";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>HtmlHelperExample</h2>
+
+<input type="text" name="LastName" id="LastName" value="kevin" style="color:purple"/><br />
+@Html.TextBox("firstName","peter",new { @style = "color:Orange",@onclick="fun()", @type = "date" })<br />
+@Html.TextBoxFor(x=>x.EmpName, new { @style = "color:Orange",@type="date" })
+@Html.EditorFor(y=>y.Status, new { @style = "color:green" })
+<br />
+@Html.EditorForModel(Model)
+
+@Html.Password("txtpwd", "abcd", new { @class = "form-control" });
+<span>Agreement</span> @Html.CheckBox("agreement", true)
+@Html.RadioButton("Gender", "Male", true)<span>Male</span> @Html.RadioButton("Gender", "FeMale") <span> FeMale </span>
+
+@Html.DropDownList("City", new List<SelectListItem>(){
+new SelectListItem{Text="Hyderabad",Value="1"},
+new SelectListItem{Text="Secerabad",Value="2",Selected=true}
+
+}, "select City",new {@class="form-control",@style= "color:red;",@onchange="fun()" })
+
+@Html.DropDownList("adgasd")
+<script>
+    function fun()
+    {
+        alert("fun is done");
+    }
+</script>

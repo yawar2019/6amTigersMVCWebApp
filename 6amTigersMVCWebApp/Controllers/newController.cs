@@ -357,5 +357,15 @@ namespace _6amTigersMVCWebApp.Controllers
             string value = Convert.ToString(TempData.Peek("Employee"));
             return Content(value);
         }
+
+
+        public ActionResult HtmlHelperExample()
+        {
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpName = "John";
+            EmployeeEntities db = new EmployeeEntities();
+            ViewBag.adgasd = new SelectList(db.employeeDetails, "EmpId", "EmpName");
+            return View(emp);
+        }
     }
 }
