@@ -367,5 +367,21 @@ namespace _6amTigersMVCWebApp.Controllers
             ViewBag.adgasd = new SelectList(db.employeeDetails, "EmpId", "EmpName");
             return View(emp);
         }
+
+
+
+        public ActionResult HtmlHelperExample2(int ? id)
+        {
+             
+            EmployeeEntities db = new EmployeeEntities();
+
+            ViewBag.adgasd = new SelectList(db.employeeDetails, "EmpId", "EmpName");
+
+
+            var   Emp = db.employeeDetails.Where(x=>x.EmpId==id).SingleOrDefault();
+            return Json(Emp, JsonRequestBehavior.AllowGet);
+
+            
+        }
     }
 }

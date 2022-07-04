@@ -8,7 +8,7 @@
 
 <input type="text" name="LastName" id="LastName" value="kevin" style="color:purple"/><br />
 @Html.TextBox("firstName","peter",new { @style = "color:Orange",@onclick="fun()", @type = "date" })<br />
-@Html.TextBoxFor(x=>x.EmpName, new { @style = "color:Orange",@type="date" })
+@*@Html.TextBoxFor(x=>x.EmpName, new { @style = "color:Orange",@type="date" })*@
 @Html.EditorFor(y=>y.Status, new { @style = "color:green" })
 <br />
 @Html.EditorForModel(Model)
@@ -22,11 +22,39 @@ new SelectListItem{Text="Hyderabad",Value="1"},
 new SelectListItem{Text="Secerabad",Value="2",Selected=true}
 
 }, "select City",new {@class="form-control",@style= "color:red;",@onchange="fun()" })
+@Html.DropDownList("adgasd")<br />
+@Html.DropDownList("alpha", (IEnumerable<SelectListItem>)ViewBag.adgasd, "Select Employee",new {@onchange = "fun()"})<br />
+@Html.DropDownList("EmpName",(IEnumerable<SelectListItem>)ViewBag.adgasd,"Select Employee", new { @onchange = "fun2()" })<br />
 
-@Html.DropDownList("adgasd")
+@Html.TextArea("Address", "hyderabad", 10, 50, new {@class="form-control" })
+
+
+<script src="~/scripts/jquery-1.10.2.min.js"></script>
 <script>
     function fun()
     {
-        alert("fun is done");
+        var EmployeeId = $('#alpha option:selected').val();
+        var EmployeeName = $('#alpha option:selected').text();
+        alert("Selected EmpId is " + EmployeeId);
+        alert("Selected EmpName is " + EmployeeName);
     }
+
+    $('#EmpName').on("onchange", function () { alert("Hello"); })
+    
+    function fun2() {
+        var EmployeeId = $('#EmpName option:selected').val();
+        $.ajax({
+            url: "http://localhost:60414/new/HtmlHelperExample2?id" = EmployeeId,
+            type: "GET",
+            datatype: "json",
+            
+            success: function (result) {
+                $.each(result, function (index, key) {
+                   
+                    alert(key.EmpName);
+                })
+            }
+        })
+    }
+
 </script>
