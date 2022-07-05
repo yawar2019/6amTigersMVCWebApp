@@ -1,4 +1,6 @@
-﻿@model _6amTigersMVCWebApp.Models.EmployeeModel
+﻿@using _6amTigersMVCWebApp.Models;
+
+@model _6amTigersMVCWebApp.Models.EmployeeModel
 @{
     ViewBag.Title = "HtmlHelperExample";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
@@ -27,6 +29,17 @@ new SelectListItem{Text="Secerabad",Value="2",Selected=true}
 @Html.DropDownList("EmpName",(IEnumerable<SelectListItem>)ViewBag.adgasd,"Select Employee", new { @onchange = "fun2()" })<br />
 
 @Html.TextArea("Address", "hyderabad", 10, 50, new {@class="form-control" })
+
+@myhtmlhelper.MyLabel("FirstName")
+@Html.createUrControl("text")
+
+@Html.createUrControl("file")
+
+@helper labelbyrazzorcode(string content)
+{
+ <label>@content</label>   
+ }
+@labelbyrazzorcode("hi this is ali")
 
 
 <script src="~/scripts/jquery-1.10.2.min.js"></script>

@@ -190,6 +190,7 @@
       <DependentUpon>EmpDetailModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\myhtmlhelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
