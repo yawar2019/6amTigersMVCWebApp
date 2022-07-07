@@ -383,5 +383,27 @@ namespace _6amTigersMVCWebApp.Controllers
 
             
         }
+
+
+        public ActionResult ValidationExample()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ValidationExample(RegistrationModel reg)
+        {
+            if(ModelState.IsValid)
+            {
+                return Redirect("ValidationExample");
+            }
+            else
+            {
+
+            }
+
+            return View();
+        }
     }
 }
