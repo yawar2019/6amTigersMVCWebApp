@@ -1,4 +1,5 @@
-﻿using _6amTigersMVCWebApp.Models;
+﻿using _6amTigersMVCWebApp.Filter;
+using _6amTigersMVCWebApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,8 @@ using System.Web.Mvc;
 
 namespace _6amTigersMVCWebApp.Controllers
 {
+    [CustomFilter]
+
     public class newController : Controller
     {
         // GET: new
@@ -384,9 +387,9 @@ namespace _6amTigersMVCWebApp.Controllers
             
         }
 
-
         public ActionResult ValidationExample()
         {
+           
 
             return View();
         }
@@ -403,6 +406,13 @@ namespace _6amTigersMVCWebApp.Controllers
 
             }
 
+            return View();
+        }
+
+        [CustomFilter]
+        public ActionResult TestFilter()
+        {
+            ViewBag.Testplayer = "Dhoni";
             return View();
         }
     }
