@@ -170,6 +170,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\newController.cs" />
     <Compile Include="Filter\CustomFilter.cs" />
     <Compile Include="Global.asax.cs">
@@ -198,6 +199,15 @@
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Models\myhtmlhelper.cs" />
     <Compile Include="Models\RegistrationModel.cs" />
+    <Compile Include="Models\Role.cs">
+      <DependentUpon>EmpDetailModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserDetail.cs">
+      <DependentUpon>EmpDetailModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserRoleMapping.cs">
+      <DependentUpon>EmpDetailModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -231,6 +241,8 @@
     <Content Include="Views\new\HtmlHelperExample.cshtml" />
     <Content Include="Views\new\ValidationExample.cshtml" />
     <Content Include="Views\new\TestFilter.cshtml" />
+    <Content Include="Views\Login\SecuredPage.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
