@@ -35,7 +35,17 @@ namespace _6amTigersMVCWebApp.Controllers
             return View();
         }
 
+        [Authorize(Roles ="Admin")]
+        public ActionResult AboutUs()
+        {
+            return View();
+        }
 
+        [Authorize(Roles="Manager")]
+        public ActionResult ContactUs()
+        {
+            return View();
+        }
 
         public ActionResult SignOut()
         {

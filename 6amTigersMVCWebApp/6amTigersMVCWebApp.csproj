@@ -176,6 +176,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CustomRoleProvider.cs" />
     <Compile Include="Models\DepartmentModel.cs" />
     <Compile Include="Models\EmpDept.cs" />
     <Compile Include="Models\EmpDetailModel.Context.cs">
@@ -243,6 +244,8 @@
     <Content Include="Views\new\TestFilter.cshtml" />
     <Content Include="Views\Login\SecuredPage.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\AboutUs.cshtml" />
+    <Content Include="Views\Login\ContactUs.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
