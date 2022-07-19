@@ -52,5 +52,11 @@ namespace _6amTigersMVCWebApp.Controllers
             FormsAuthentication.SignOut();
             return Redirect("login");
         }
+
+        [OutputCache(Duration =20,Location =System.Web.UI.OutputCacheLocation.Client)]
+        public ActionResult GetCacheData()
+        {
+            return View();
+        }
     }
 }
