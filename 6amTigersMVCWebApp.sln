@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6amTigersMVCWebApp", "6amTigersMVCWebApp\6amTigersMVCWebApp.csproj", "{1E23FA8C-BD80-4AEE-B156-0013611A8144}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EE7B5B74-D938-4961-8047-9393D8A5AC72} = {EE7B5B74-D938-4961-8047-9393D8A5AC72}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoDotnet", "AdoDotnet\AdoDotnet.csproj", "{890D782B-C157-4329-A4A4-B58D67721AAC}"
 EndProject
@@ -16,6 +19,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperExample", "DapperExample\DapperExample.csproj", "{AE7B9EB5-F587-40CF-A890-ACDC6430C56D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandleErrorAttributeExample", "HandleErrorAttributeExample\HandleErrorAttributeExample.csproj", "{FE5CD3A7-272C-40E4-8697-A7057AFC2B94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceExample", "WebServiceExample\WebServiceExample.csproj", "{EE7B5B74-D938-4961-8047-9393D8A5AC72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +56,10 @@ Global
 		{FE5CD3A7-272C-40E4-8697-A7057AFC2B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE5CD3A7-272C-40E4-8697-A7057AFC2B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE5CD3A7-272C-40E4-8697-A7057AFC2B94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE7B5B74-D938-4961-8047-9393D8A5AC72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE7B5B74-D938-4961-8047-9393D8A5AC72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE7B5B74-D938-4961-8047-9393D8A5AC72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE7B5B74-D938-4961-8047-9393D8A5AC72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

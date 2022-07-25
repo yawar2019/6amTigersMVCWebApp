@@ -50,8 +50,18 @@ namespace HandleErrorAttributeExample.Controllers
         {
                 int a = 10, b = d, c;
                 c = a / b;
-                return View();
+            TempData["empid"] = 123;
+           
+                return RedirectToAction("Contact4");
         }
+        public ActionResult Contact4()
+        {
 
+            //int a = (int)TempData["empid"];
+            //TempData.Keep();
+            int a=(int)TempData.Peek("empid");
+            ViewBag.xyz = a;
+            return View();
+        }
     }
 }

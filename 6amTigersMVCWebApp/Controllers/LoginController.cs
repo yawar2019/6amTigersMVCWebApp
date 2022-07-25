@@ -58,5 +58,12 @@ namespace _6amTigersMVCWebApp.Controllers
         {
             return View();
         }
+
+        public ActionResult GetConsumedServices()
+        {
+            ServiceReference1.WebService1SoapClient obj = new ServiceReference1.WebService1SoapClient();
+            var r=obj.Add(12, 30);
+            return Content(r.ToString());
+        }
     }
 }
