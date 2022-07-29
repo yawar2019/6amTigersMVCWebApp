@@ -65,5 +65,18 @@ namespace _6amTigersMVCWebApp.Controllers
             var r=obj.Add(12, 30);
             return Content(r.ToString());
         }
+
+        public ActionResult GetConsumedWcfServices()
+        {
+            ServiceReference2.Service1Client obj = new ServiceReference2.Service1Client();
+            var r = obj.Add(12, 30);
+            return Content(r.ToString());
+        }
+        public ActionResult GetConsumedWcfServices2()
+        {
+            ServiceReference4.Service1Client obj = new ServiceReference4.Service1Client("NetTcpBinding_IService11");
+            var r = obj.Add(12, 30);
+            return Content(r.ToString());
+        }
     }
 }
