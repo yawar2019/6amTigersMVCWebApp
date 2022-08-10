@@ -1,0 +1,41 @@
+﻿Entity Framework is an orm model (object relational mapping model)
+it map your c# object with database object
+according to your E.F you should not write any database object at the application side
+you should treat your database object as a class object
+
+E.F contain two important classes on which it is standing 
+1)Model
+2)Context
+
+
+what is the benifit of using EF?
+
+-> you don't need to write large amount of code like in ado.net you write
+few line of code is enough to complete your operation
+
+->EF Create database Queries at backend internally behalf of developers
+-->EF also Create database,table behalf of you
+
+--->you don't need write large of amount of code to map how you map in
+ado.net .here it Automatically map c# object with database object.
+
+---->you can Create Application using E.F more faster  Compare to Ado.net 
+
+Q)how many types of Approaches we have in E.F?
+---> EF have 3 types of Approaches to perform dataccess operation
+1)Database First Approaches
+           --->you can use DFA if you have existing database and table ready with you.
+based on your Table $$$>Model class and Context Class is going to be Automatically Generated.
+
+2)Code First Approach
+       ---->you can use CFA if you don't have any existing database,tables at that time you 
+can go for code First Approach
+
+Here you are going to Create Model class  and Context Class manually based on that
+db and table going automatically generated 
+
+3)Model First Approach
+it uses EF Designer Window by using that GUI you will define Property
+and based on that Model class,context class and Script is going to be gnerated 
+
+ 

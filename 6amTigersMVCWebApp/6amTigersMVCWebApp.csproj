@@ -128,9 +128,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ai.0.22.9-build00167.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="EF.txt" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Models\EmpDetailModel.Context.tt">
@@ -155,6 +157,8 @@
     <Content Include="Models\EmpDetailModel.edmx.diagram">
       <DependentUpon>EmpDetailModel.edmx</DependentUpon>
     </Content>
+    <Content Include="MvcNew Material.docx" />
+    <Content Include="Running Notes MVC.docx" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -340,6 +344,7 @@
     <Content Include="Service References\ServiceReference4\_6amTigersMVCWebApp.ServiceReference4.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Url.text" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

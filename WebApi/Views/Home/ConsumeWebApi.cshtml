@@ -35,31 +35,44 @@
     $(document).ready(function () {
 
 
-    onload = function showdata() {
-        $.ajax({
-            url: "http://localhost:58551/api/employeeDetailsApi",
-            info : false,
-            type: "Get",
-            datatype: "json",
-            success: function (result) {
-                alert(result);
+    //    onload = function showdata() {
+    //        $.ajax({
+    //            url: "http://localhost:58551/api/employeeDetailsApi",
+    //            info: false,
+    //            type: "Get",
+    //            datatype: "json",
+    //            success: function (result) {
+    //                alert(result);
+
+    //                $.each(result, function (i, key) {
+
+    //                    $("#table-1>tbody tr:last").after('<tr><td>' + key.EmpId + '</td><td>' + key.EmpName + '</td><td>' + key.EmpSalary + '</td></tr>');
+    //                });
+    //                $("#table-1>tbody tr:first").remove();
+
+    //            }
+    //        });
+    //    }
+
+    //    $('#table-1').DataTable();
+    //});
+
+
+
+
+    $('#table-1').dataTable({
+        "ajax": {
+            "url": "http://localhost:58551/api/employeeDetailsApi",
+            "dataSrc": function (json) {
                 $.each(result, function (i, key) {
 
                     $("#table-1>tbody tr:last").after('<tr><td>' + key.EmpId + '</td><td>' + key.EmpName + '</td><td>' + key.EmpSalary + '</td></tr>');
                 });
+                return json.data;
             }
-        });
-    }
-
-    $('#table-1').DataTable();
-    var tableRow = $("td").filter(function () {
-        return $(this).text() == "No data available in table";
-    }).closest("tr").remove();
-    $('#table-1').DataTable();
-
-
+        }
     });
-   
+    });
 </script>
 
 
